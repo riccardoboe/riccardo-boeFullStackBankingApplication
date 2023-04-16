@@ -7,16 +7,15 @@ const dbName = "capstoneproject-badbank";
 MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) {
     console.log("Connected successfully to db server");
 
-    db = client.db(dbName);
+
     
 });    
 
 // create a new user
 function create(name, email, password) {
     return new Promise((resolve, reject) => {
-        ;
         const document = {name, email, password, balance: 0};
-        const collection = db
+        const collection = client.db(dbName)
             .collection(collectionName)
             .insertOne(
                 document,
@@ -31,7 +30,7 @@ function create(name, email, password) {
 
 function all() {
     return new Promise((resolve, reject) => {
-        const allAccounts = db
+        const allAccounts = client.db(dbName)
             .collection(collectionName)
             .find({})
             .toArray(function(err, documents) {
@@ -44,7 +43,7 @@ function all() {
 
 function login(email, password) {
     return new Promise((resolve, reject) => {
-        const authorizedUser = db
+        const authorizedUser = client.db(dbName)
             .collection(collectionName)
             .find({ email: email, password: password})
             .toArray(function(err, document) {
@@ -57,7 +56,7 @@ function login(email, password) {
 // update balance
 function depositOrWithdraw(email, amount){
     return new Promise((resolve, reject) => {    
-        const customers = db
+        const customers = client.db(dbName)
             .collection(collectionName)            
             .findOneAndUpdate(
                 {email: email},
