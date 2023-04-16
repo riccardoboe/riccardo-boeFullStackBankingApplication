@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const urlMongoDB = 'mongodb://localhost:27017';
-
+let client = null;
 let db = null;
 let collectionName ='users'
 const dbName = "badbank";
