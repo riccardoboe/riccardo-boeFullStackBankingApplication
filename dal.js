@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const urlMongoDB = "mongodb+srv://riccardoboe:Icajdzvn123@cluster0.gsqb61y.mongodb.net/?retryWrites=true&w=majority";
+const urlMongoDB = 'mongodb://localhost:27017';
+//const urlMongoDB = "mongodb+srv://riccardoboe:Icajdzvn123@cluster0.gsqb61y.mongodb.net/?retryWrites=true&w=majority";
 let client = null;
 let db = null;
 let collectionName ='users'
