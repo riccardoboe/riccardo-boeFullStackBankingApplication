@@ -27,7 +27,7 @@ const dbName = "capstone-bank";
 
 
 MongoClient.connect(urlMongoDB, {useUnifiedTopology: true}, function(err, client){
-    console.log('testing the connection - we are connected')
+    console.log('connected to mongo!')
     db = client.db(dbName);
     
 });    
@@ -56,7 +56,6 @@ function all() {
             .collection(collectionName)
             .find({})
             .toArray(function(err, documents) {
-                console.log('array of all documents = ',documents )
                 err ? reject(err) : resolve(documents)
             });
     });
@@ -69,7 +68,6 @@ function login(email, password) {
             .collection(collectionName)
             .find({ email: email, password: password})
             .toArray(function(err, document) {
-                console.log('array of logged in account document = ',document )
                 err ? reject(err) : resolve(document)
             });
     });
@@ -85,7 +83,6 @@ function depositOrWithdraw(email, amount){
                 { $inc: { balance: amount}},
                 { returnDocument: "after" },
                 function (err, document) {
-                    console.log('$' + amount + 'to balance for ' + email + document.value.balance + ' Open the Studio 3T app and look for database named ' + dbName +' then collection named ' + collectionName)
                     err ? reject(err) : resolve(document)
                 }
             )       

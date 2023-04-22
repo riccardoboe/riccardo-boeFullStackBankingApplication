@@ -47,11 +47,9 @@ function Withdraw() {
       setDocument(document.value);
     })();
 
-    //ctx.users[ctx.currentUserIndex].balance = ctx.users[ctx.currentUserIndex].balance - amount
-    //console.log(ctx.users[ctx.currentUserIndex])
     setShow(false);
   }
-  //clear all the values when "add another account is clicked"
+  //clear all the values
   function resetForm() {
     setAmount(0);
     setShow(true);
