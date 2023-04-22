@@ -30,7 +30,7 @@ function Login() {
     if (!validateInputs(email, "email")) return;
     if (!validateInputs(password, "password")) return;
 
-    //url hits the index.js Node Express Application route to create() in mongoDB.
+    // index.js route to create() in mongoDB.
     const url = `/account/login/${email}/${password}`;
     (async () => {
       var res = await fetch(url);

@@ -30,12 +30,11 @@ function CreateAccount() {
     if (!validate(email, "email", password)) return;
     if (!validate(password, "password", password)) return;
 
-    //url hits the index.js Node Express Application route to create() in mongoDB.
+    //index.js  route to create() in mongoDB.
     let url = `/account/create/${name}/${email}/${password}`;
     (async () => {
       var res = await fetch(url);
-      //var data = await res.json();
-      //console.log(`data response from account/create ${data}`);
+
     })();
     url = `/account/login/${email}/${password}`;
     (async () => {

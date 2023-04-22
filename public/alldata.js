@@ -31,11 +31,11 @@ function AllData() {
             <ul className="list-group">
               {documents.map((user) => (
                 <li key={user._id} className="list-group-item text-secondary">
-                  Account ID: {user._id}
+                  User ID: {user._id}
                   <br />
-                  Name: {user.name}
+                  Username: {user.name}
                   <br />
-                  Email: {user.email}
+                  Email Address: {user.email}
                   <br />
                   Password: {user.password}
                   <br />

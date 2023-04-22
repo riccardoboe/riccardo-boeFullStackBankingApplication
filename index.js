@@ -25,7 +25,7 @@ app.get('/account/login/:email/:password', function(req, res) {
         req.params.email,
         req.params.password
     ).then((document) => {
-        console.log('this is the mongoDB document for the logged in user. It is beinging sent from index.js express server application to the front end client. ', document);
+        console.log('logged in!. ', document);
         res.send(document);
     });
 });

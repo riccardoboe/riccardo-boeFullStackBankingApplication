@@ -7,7 +7,7 @@ function Deposit() {
   const [document, setDocument] = React.useState(ctx.currentUser);
   const [authUser, setAuthUser] = React.useState(ctx.currentUser.name);
 
-  if (ctx.loggedIn === false) return "Login to account";
+  if (ctx.loggedIn === false) return "You Have to log in before making any transaction";
 
   function validate(field, label) {
     if (!field) {

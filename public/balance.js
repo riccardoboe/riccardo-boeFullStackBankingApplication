@@ -1,7 +1,7 @@
 function Balance() {
   const ctx = React.useContext(UserContext);
 
-  if (ctx.loggedIn === false) return "Login to account";
+  if (ctx.loggedIn === false) return "You Have to log in before making any transaction";
 
   // Create our number formatter.
   const formatter = new Intl.NumberFormat("en-US", {

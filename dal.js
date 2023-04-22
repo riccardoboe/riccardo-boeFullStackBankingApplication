@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const urlMongoDB = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
-//if(process.env.DEPLOYMENT_MODE==="DEV") url = 'mongodb://localhost:27017';
+if(process.env.DEPLOYMENT_MODE==="DEV") url = 'mongodb://localhost:27017';
 
 //const uri = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
 
@@ -37,7 +37,7 @@ MongoClient.connect(urlMongoDB, {useUnifiedTopology: true}, function(err, client
 function create(name, email, password) {
     return new Promise((resolve, reject) => {
         ;
-        const document = {name, email, password, balance: 0};
+        const document = {name, email, password, balance: 100};
         const collection = db
             .collection(collectionName)
             .insertOne(
