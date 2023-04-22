@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const urlMongoDB = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
-if(process.env.DEPLOYMENT_MODE==="DEV") url = 'mongodb://localhost:27017';
+//if(process.env.DEPLOYMENT_MODE==="DEV") url = 'mongodb://localhost:27017';
 
 //const uri = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
 
