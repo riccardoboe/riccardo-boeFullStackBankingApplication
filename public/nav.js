@@ -1,7 +1,7 @@
 function Nav(props) {
   function LoginNavBar() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-secondary bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-secondary">
         <Link className="navbar-brand" to="#">
           Bad Bank
         </Link>
@@ -45,7 +45,7 @@ function Nav(props) {
 
   function LogoutNavBar() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-secondary bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-secondary">
         <Link className="navbar-brand" to="/">
           Bad Bank
         </Link>
