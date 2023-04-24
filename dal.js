@@ -1,8 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const urlMongoDB = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
+const urlMongoDB = "mongodb+srv://riccardoboe:<password>@@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
 if(process.env.DEPLOYMENT_MODE==="DEV") url = 'mongodb://localhost:27017';
-
-//const uri = "mongodb+srv://riccardoboe:syzuindQgdMLpGlp@cluster0.vkg4nnq.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(urlMongoDB);
